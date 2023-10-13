@@ -22,6 +22,8 @@ class Locators:
     # Страница регистрации
     REGISTRATION_BUTTON = (By.XPATH, '//form//button')  # Кнопка регистрации
     LOGIN_LINK_REGISTRATION_PAGE = (By.XPATH, '//a[@href="/login"]')  # Ссылка перехода на страницу логина
+    REGISTRATION_TITLE = (By.XPATH, '//h2[text()="Регистрация"]')  # Заголовок формы регистрации
+    USER_ALREADY_EXIST_VALIDATION_ERROR = (By.XPATH, '//p[text()="Такой пользователь уже существует"]')  # Ошибка валидации "Такой пользователь уже существует"
 
     # Страница логина
     REGISTRATION_LINK_LOGIN_PAGE = (By.XPATH, '//a[@href="/register"]')  # Ссылка перехода на страницу регистрации

@@ -5,7 +5,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.support import expected_conditions as EC
 from locators import Locators
-from constants import Constants
+from constants import ConstantsAuth
 
 
 @pytest.fixture
@@ -18,8 +18,8 @@ def driver():
 
 @pytest.fixture
 def login(driver):
-    email = Constants.email
-    password = Constants.password
+    email = ConstantsAuth.EMAIL
+    password = ConstantsAuth.PASSWORD
 
     driver.get('https://stellarburgers.nomoreparties.site/login')
     WebDriverWait(driver, 5).until(EC.visibility_of_element_located(Locators.REGISTRATION_LINK_LOGIN_PAGE))
